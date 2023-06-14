@@ -3,7 +3,7 @@ package theEnforcer.cards.cardvars;
 import basemod.abstracts.DynamicVariable;
 import theEnforcer.cards.AbstractEasyCard;
 
-import static theEnforcer.ModFile.makeID;
+import static theEnforcer.EnforcerMod.makeID;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 

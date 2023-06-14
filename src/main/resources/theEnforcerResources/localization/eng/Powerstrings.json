@@ -1,10 +1,9 @@
 {
-  "${ModID}:ExampleTwoAmountPower": {
-    "NAME": "Example 2",
+  "${ModID}:HypePower": {
+    "NAME": "Hype",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
-      " #yStrength and #b",
-      " #yDexterity."
+      "The next ",
+      "-cost card you play, is free."
     ]
   }
 }

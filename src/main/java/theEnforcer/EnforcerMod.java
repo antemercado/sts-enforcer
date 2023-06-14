@@ -26,7 +26,7 @@ import java.nio.charset.StandardCharsets;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
-public class ModFile implements
+public class EnforcerMod implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
         EditStringsSubscriber,
@@ -69,10 +69,10 @@ public class ModFile implements
         return "eng";
     }
 
-    public ModFile() {
+    public EnforcerMod() {
         BaseMod.subscribe(this);
 
-        BaseMod.addColor(CharacterFile.Enums.ENFORCER_BLACK, characterColor, characterColor, characterColor,
+        BaseMod.addColor(EnforcerCharacter.Enums.ENFORCER_BLACK, characterColor, characterColor, characterColor,
                 characterColor, characterColor, characterColor, characterColor,
                 ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
@@ -100,13 +100,13 @@ public class ModFile implements
     }
 
     public static void initialize() {
-        ModFile thismod = new ModFile();
+        EnforcerMod thismod = new EnforcerMod();
     }
 
     @Override
     public void receiveEditCharacters() {
-        BaseMod.addCharacter(new CharacterFile(CharacterFile.characterStrings.NAMES[1], CharacterFile.Enums.THE_ENFORCER),
-                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, CharacterFile.Enums.THE_ENFORCER);
+        BaseMod.addCharacter(new EnforcerCharacter(EnforcerCharacter.characterStrings.NAMES[1], EnforcerCharacter.Enums.THE_ENFORCER),
+                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, EnforcerCharacter.Enums.THE_ENFORCER);
     }
 
     @Override

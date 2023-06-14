@@ -3,8 +3,8 @@ package theEnforcer.relics;
 import basemod.abstracts.CustomRelic;
 import theEnforcer.util.TexLoader;
 
-import static theEnforcer.ModFile.makeRelicPath;
-import static theEnforcer.ModFile.modID;
+import static theEnforcer.EnforcerMod.makeRelicPath;
+import static theEnforcer.EnforcerMod.modID;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.relics.AbstractRelic;

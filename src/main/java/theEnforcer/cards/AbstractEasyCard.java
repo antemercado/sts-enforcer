@@ -1,11 +1,11 @@
 package theEnforcer.cards;
 
 import basemod.abstracts.CustomCard;
-import theEnforcer.CharacterFile;
+import theEnforcer.EnforcerCharacter;
 import theEnforcer.util.CardArtRoller;
 
-import static theEnforcer.ModFile.makeImagePath;
-import static theEnforcer.ModFile.modID;
+import static theEnforcer.EnforcerMod.makeImagePath;
+import static theEnforcer.EnforcerMod.modID;
 import static theEnforcer.util.Wiz.atb;
 import static theEnforcer.util.Wiz.att;
 
@@ -41,7 +41,7 @@ public abstract class AbstractEasyCard extends CustomCard {
     private boolean needsArtRefresh = false;
 
     public AbstractEasyCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
-        this(cardID, cost, type, rarity, target, CharacterFile.Enums.ENFORCER_BLACK);
+        this(cardID, cost, type, rarity, target, EnforcerCharacter.Enums.ENFORCER_BLACK);
     }
 
     public AbstractEasyCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {

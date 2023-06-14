@@ -1,13 +1,13 @@
 package theEnforcer.relics;
 
-import static theEnforcer.ModFile.makeID;
+import static theEnforcer.EnforcerMod.makeID;
 
-import theEnforcer.CharacterFile;
+import theEnforcer.EnforcerCharacter;
 
 public class TodoItem extends AbstractEasyRelic {
     public static final String ID = makeID("TodoItem");
 
     public TodoItem() {
-        super(ID, RelicTier.STARTER, LandingSound.FLAT, CharacterFile.Enums.ENFORCER_BLACK);
+        super(ID, RelicTier.STARTER, LandingSound.FLAT, EnforcerCharacter.Enums.ENFORCER_BLACK);
     }
 }

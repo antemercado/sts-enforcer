@@ -1,6 +1,6 @@
 package theEnforcer.cards;
 
-import static theEnforcer.ModFile.makeID;
+import static theEnforcer.EnforcerMod.makeID;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

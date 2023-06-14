@@ -2,7 +2,7 @@ package theEnforcer.cards;
 
 import basemod.AutoAdd;
 
-import static theEnforcer.ModFile.makeID;
+import static theEnforcer.EnforcerMod.makeID;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

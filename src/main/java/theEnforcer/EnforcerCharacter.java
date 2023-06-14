@@ -4,6 +4,7 @@ import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import theEnforcer.cards.Defend;
+import theEnforcer.cards.GetHype;
 import theEnforcer.cards.Strike;
 import theEnforcer.relics.TodoItem;
 
@@ -23,12 +24,12 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
-import static theEnforcer.CharacterFile.Enums.ENFORCER_BLACK;
-import static theEnforcer.ModFile.*;
+import static theEnforcer.EnforcerCharacter.Enums.ENFORCER_BLACK;
+import static theEnforcer.EnforcerMod.*;
 
 import java.util.ArrayList;
 
-public class CharacterFile extends CustomPlayer {
+public class EnforcerCharacter extends CustomPlayer {
 
     static final String ID = makeID("ModdedCharacter");
     static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
@@ -36,7 +37,7 @@ public class CharacterFile extends CustomPlayer {
     static final String[] TEXT = characterStrings.TEXT;
 
 
-    public CharacterFile(String name, PlayerClass setClass) {
+    public EnforcerCharacter(String name, PlayerClass setClass) {
         super(name, setClass, new CustomEnergyOrb(orbTextures, modID + "Resources/images/char/mainChar/orb/vfx.png", null), new SpriterAnimation(
                 modID + "Resources/images/char/mainChar/static.scml"));
         initializeClass(null,
@@ -60,12 +61,20 @@ public class CharacterFile extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
-            retVal.add(Strike.ID);
-        }
-        for (int i = 0; i < 4; i++) {
-            retVal.add(Defend.ID);
-        }
+
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
+
+        retVal.add(GetHype.ID);
+        retVal.add(GetHype.ID);
+
         return retVal;
     }
 
@@ -127,8 +136,7 @@ public class CharacterFile extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        System.out.println("YOU NEED TO SET getStartCardForEvent() in your " + getClass().getSimpleName() + " file!");
-        return null;
+        return new GetHype();
     }
 
     @Override
@@ -138,7 +146,7 @@ public class CharacterFile extends CustomPlayer {
 
     @Override
     public AbstractPlayer newInstance() {
-        return new CharacterFile(name, chosenClass);
+        return new EnforcerCharacter(name, chosenClass);
     }
 
     @Override
@@ -172,10 +180,10 @@ public class CharacterFile extends CustomPlayer {
     public static class Enums {
         @SpireEnum
         public static AbstractPlayer.PlayerClass THE_ENFORCER;
-        @SpireEnum(name = "THE_ENFORCER")
+        @SpireEnum(name = "ENFORCER_BLACK")
         public static AbstractCard.CardColor ENFORCER_BLACK;
         @SpireEnum(name = "ENFORCER_BLACK")
         @SuppressWarnings("unused")
-        public static CardLibrary.LibraryType LIBRARY_ENFORCER;
+        public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 }
