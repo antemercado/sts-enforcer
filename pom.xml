@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>UnimportantInfo</groupId>
 
-    <artifactId>TheTodo</artifactId>
+    <groupId>enforcer</groupId>
+    <artifactId>theEnforcer</artifactId>
+    <name>The Enforcer</name>
     <version>0.0.1</version>
-    <name>The Todo</name>
-    <description>TODO: Change this description</description>
+    <description>The Enforcer Character Mod</description>
     <!-- Change the above for mod information. -->
 
     <properties>
@@ -16,11 +16,11 @@
         <ModTheSpire.version>3.18.2</ModTheSpire.version>
 
         <!-- CHANGE THIS TO MATCH YOUR MODID FIELD IN THE MAIN TodoMod CLASS FILE -->
-        <ModID>todomod</ModID>
+        <ModID>theEnforcer</ModID>
         <!-- CHANGE THIS TO MATCH YOUR MODID FIELD IN THE MAIN TodoMod CLASS FILE -->
 
         <!--CHANGE THIS TO YOUR STEAM INSTALLATION-->
-        <Steam.path>C:/Program Files (x86)/Steam/steamapps/</Steam.path>
+        <Steam.path>A:\Program Files (x86)\Steam\steamapps</Steam.path>
 
     </properties>
 

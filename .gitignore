@@ -1,5 +1,8 @@
 *.class
 
+# Image resources
+src/main/resources/theEnforcerResources/images
+
 # IntelliJ
 .idea/
 out/
