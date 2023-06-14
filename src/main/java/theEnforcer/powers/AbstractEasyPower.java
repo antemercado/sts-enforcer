@@ -1,4 +1,4 @@
-package code.powers;
+package theEnforcer.powers;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -8,8 +8,9 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import code.ModFile;
-import code.util.TexLoader;
+
+import theEnforcer.ModFile;
+import theEnforcer.util.TexLoader;
 
 public abstract class AbstractEasyPower extends AbstractPower {
     public int amount2 = -1;

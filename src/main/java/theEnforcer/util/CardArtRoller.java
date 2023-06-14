@@ -1,7 +1,9 @@
-package code.util;
+package theEnforcer.util;
 
 import basemod.BaseMod;
 import basemod.patches.whatmod.WhatMod;
+import theEnforcer.cards.AbstractEasyCard;
+
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -22,7 +24,6 @@ import com.megacrit.cardcrawl.cards.red.Defend_Red;
 import com.megacrit.cardcrawl.cards.red.Strike_Red;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.random.Random;
-import code.cards.AbstractEasyCard;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,8 +1,8 @@
-package code.relics;
+package theEnforcer.relics;
 
-import code.CharacterFile;
+import static theEnforcer.ModFile.makeID;
 
-import static code.ModFile.makeID;
+import theEnforcer.CharacterFile;
 
 public class TodoItem extends AbstractEasyRelic {
     public static final String ID = makeID("TodoItem");

@@ -1,4 +1,4 @@
-package code.powers;
+package theEnforcer.powers;
 
 import com.megacrit.cardcrawl.core.AbstractCreature;
 

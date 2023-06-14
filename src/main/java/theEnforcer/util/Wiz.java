@@ -1,4 +1,4 @@
-package code.util;
+package theEnforcer.util;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -17,7 +17,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import code.actions.TimedVFXAction;
+
+import theEnforcer.actions.TimedVFXAction;
 
 import java.util.ArrayList;
 import java.util.function.Consumer;

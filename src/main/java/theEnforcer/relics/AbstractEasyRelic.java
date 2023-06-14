@@ -1,12 +1,13 @@
-package code.relics;
+package theEnforcer.relics;
 
 import basemod.abstracts.CustomRelic;
+import theEnforcer.util.TexLoader;
+
+import static theEnforcer.ModFile.makeRelicPath;
+import static theEnforcer.ModFile.modID;
+
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import code.util.TexLoader;
-
-import static code.ModFile.makeRelicPath;
-import static code.ModFile.modID;
 
 public abstract class AbstractEasyRelic extends CustomRelic {
     public AbstractCard.CardColor color;

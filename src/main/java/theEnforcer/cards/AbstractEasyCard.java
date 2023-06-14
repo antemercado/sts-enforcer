@@ -1,6 +1,14 @@
-package code.cards;
+package theEnforcer.cards;
 
 import basemod.abstracts.CustomCard;
+import theEnforcer.CharacterFile;
+import theEnforcer.util.CardArtRoller;
+
+import static theEnforcer.ModFile.makeImagePath;
+import static theEnforcer.ModFile.modID;
+import static theEnforcer.util.Wiz.atb;
+import static theEnforcer.util.Wiz.att;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
@@ -15,13 +23,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import code.CharacterFile;
-import code.util.CardArtRoller;
-
-import static code.ModFile.makeImagePath;
-import static code.ModFile.modID;
-import static code.util.Wiz.atb;
-import static code.util.Wiz.att;
 
 public abstract class AbstractEasyCard extends CustomCard {
 

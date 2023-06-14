@@ -1,10 +1,11 @@
-package code.cards.cardvars;
+package theEnforcer.cards.cardvars;
 
 import basemod.abstracts.DynamicVariable;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import code.cards.AbstractEasyCard;
+import theEnforcer.cards.AbstractEasyCard;
 
-import static code.ModFile.makeID;
+import static theEnforcer.ModFile.makeID;
+
+import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class SecondMagicNumber extends DynamicVariable {
 

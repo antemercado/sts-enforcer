@@ -1,4 +1,4 @@
-package code.util;
+package theEnforcer.util;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
@@ -7,9 +7,9 @@ import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 
-import java.util.HashMap;
+import static theEnforcer.ModFile.makeImagePath;
 
-import static code.ModFile.makeImagePath;
+import java.util.HashMap;
 
 public class TexLoader {
     private static HashMap<String, Texture> textures = new HashMap<>();

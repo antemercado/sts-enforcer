@@ -1,9 +1,9 @@
-package code.cards;
+package theEnforcer.cards;
+
+import static theEnforcer.ModFile.makeID;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import static code.ModFile.makeID;
 
 public class Defend extends AbstractEasyCard {
     public final static String ID = makeID("Defend");
