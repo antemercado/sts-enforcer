@@ -52,9 +52,16 @@ public class HypePower extends AbstractPower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
+        flash();
         if (!card.hasTag(CustomTags.HYPE_GEN)){
             Wiz.atb(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
+    }
+
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        flash();
+        Wiz.atb(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 
     @Override

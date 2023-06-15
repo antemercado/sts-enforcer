@@ -6,7 +6,7 @@ import basemod.animations.SpriterAnimation;
 import theEnforcer.cards.Defend;
 import theEnforcer.cards.GetHype;
 import theEnforcer.cards.Strike;
-import theEnforcer.relics.TodoItem;
+import theEnforcer.relics.AdrenalineBoosterRelic;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -80,7 +80,7 @@ public class EnforcerCharacter extends CustomPlayer {
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(TodoItem.ID);
+        retVal.add(AdrenalineBoosterRelic.ID);
         return retVal;
     }
 

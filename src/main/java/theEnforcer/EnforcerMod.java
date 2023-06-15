@@ -2,16 +2,19 @@ package theEnforcer;
 
 import basemod.AutoAdd;
 import basemod.BaseMod;
+import basemod.abstracts.CustomRelic;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import theEnforcer.cards.AbstractEasyCard;
 import theEnforcer.cards.cardvars.SecondDamage;
 import theEnforcer.cards.cardvars.SecondMagicNumber;
 import theEnforcer.relics.AbstractEasyRelic;
+import theEnforcer.relics.AdrenalineBoosterRelic;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
@@ -91,6 +94,10 @@ public class EnforcerMod implements
         return modID + "Resources/images/relics/" + resourcePath;
     }
 
+    public static String makeRelicOutlinePath(String resourcePath) {
+        return modID + "Resources/images/relics/outline" + resourcePath;
+    }
+
     public static String makePowerPath(String resourcePath) {
         return modID + "Resources/images/powers/" + resourcePath;
     }
@@ -111,18 +118,7 @@ public class EnforcerMod implements
 
     @Override
     public void receiveEditRelics() {
-        new AutoAdd(modID)
-                .packageFilter(AbstractEasyRelic.class)
-                .any(AbstractEasyRelic.class, (info, relic) -> {
-                    if (relic.color == null) {
-                        BaseMod.addRelic(relic, RelicType.SHARED);
-                    } else {
-                        BaseMod.addRelicToCustomPool(relic, relic.color);
-                    }
-                    if (!info.seen) {
-                        UnlockTracker.markRelicAsSeen(relic.relicId);
-                    }
-                });
+        BaseMod.addRelicToCustomPool(new AdrenalineBoosterRelic(), EnforcerCharacter.Enums.ENFORCER_BLACK);
     }
 
     @Override
