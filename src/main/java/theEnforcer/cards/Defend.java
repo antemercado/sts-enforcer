@@ -5,13 +5,20 @@ import static theEnforcer.EnforcerMod.makeID;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Defend extends AbstractEasyCard {
-    public final static String ID = makeID("Defend");
-    // intellij stuff skill, self, basic, , ,  5, 3, , 
+public class Defend extends AbstractEnforcerCard {
+    public final static String ID = makeID(Defend.class.getSimpleName());
+
+    private static final int COST = 1;
+    private static final int BLOCK = 5;
+    private static final int UPGRADE_PLUS_BLOCK = 3;
+
+    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardType TYPE = CardType.SKILL;
 
     public Defend() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
-        baseBlock = 5;
+        super(ID, COST, TYPE, RARITY, TARGET);
+        this.baseBlock = this.block = BLOCK;
         tags.add(CardTags.STARTER_DEFEND);
     }
 
@@ -20,6 +27,6 @@ public class Defend extends AbstractEasyCard {
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(UPGRADE_PLUS_BLOCK);
     }
 }

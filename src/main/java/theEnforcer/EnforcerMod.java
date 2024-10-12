@@ -5,11 +5,13 @@ import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import theEnforcer.cards.AbstractEasyCard;
+import theEnforcer.cards.AbstractEnforcerCard;
 import theEnforcer.cards.cardvars.SecondDamage;
 import theEnforcer.cards.cardvars.SecondMagicNumber;
+import theEnforcer.powers.HypePower;
 import theEnforcer.relics.AbstractEasyRelic;
 import theEnforcer.relics.AdrenalineBoosterRelic;
+import theEnforcer.util.Wiz;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -18,11 +20,14 @@ import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import java.nio.charset.StandardCharsets;
@@ -34,7 +39,8 @@ public class EnforcerMod implements
         EditRelicsSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
-        EditCharactersSubscriber {
+        EditCharactersSubscriber,
+        PostPowerApplySubscriber {
 
     public static final String modID = "theEnforcer";
 
@@ -126,7 +132,7 @@ public class EnforcerMod implements
         BaseMod.addDynamicVariable(new SecondMagicNumber());
         BaseMod.addDynamicVariable(new SecondDamage());
         new AutoAdd(modID)
-                .packageFilter(AbstractEasyCard.class)
+                .packageFilter(AbstractEnforcerCard.class)
                 .setDefaultSeen(true)
                 .cards();
     }
@@ -151,8 +157,20 @@ public class EnforcerMod implements
 
         if (keywords != null) {
             for (Keyword keyword : keywords) {
-                BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+                BaseMod.addKeyword(modID.toLowerCase(), keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
             }
+        }
+    }
+
+    @Override
+    public void receivePostPowerApplySubscriber(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+        // Get Hype Mechanic
+        if (power.ID == HypePower.POWER_ID){
+            HypePower hypePo = (HypePower)power;
+            if (!hypePo.gainedThisPlay){
+                Wiz.atb(new RemoveSpecificPowerAction(power.owner, power.owner, power));
+            }
+            hypePo.gainedThisPlay = false;
         }
     }
 }

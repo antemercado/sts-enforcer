@@ -24,7 +24,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public abstract class AbstractEasyCard extends CustomCard {
+public abstract class AbstractEnforcerCard extends CustomCard {
 
     protected final CardStrings cardStrings;
 
@@ -40,11 +40,11 @@ public abstract class AbstractEasyCard extends CustomCard {
 
     private boolean needsArtRefresh = false;
 
-    public AbstractEasyCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
+    public AbstractEnforcerCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         this(cardID, cost, type, rarity, target, EnforcerCharacter.Enums.ENFORCER_BLACK);
     }
 
-    public AbstractEasyCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
+    public AbstractEnforcerCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
         super(cardID, "", getCardTextureString(cardID.replace(modID + ":", ""), type),
                 cost, "", type, color, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(this.cardID);

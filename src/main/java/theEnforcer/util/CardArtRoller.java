@@ -2,7 +2,7 @@ package theEnforcer.util;
 
 import basemod.BaseMod;
 import basemod.patches.whatmod.WhatMod;
-import theEnforcer.cards.AbstractEasyCard;
+import theEnforcer.cards.AbstractEnforcerCard;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -178,7 +178,7 @@ public class CardArtRoller {
             CardLibrary.LibraryType.CURSE
     };
 
-    public static void computeCard(AbstractEasyCard c) {
+    public static void computeCard(AbstractEnforcerCard c) {
         c.portrait = doneCards.computeIfAbsent(c.cardID, key -> {
             ReskinInfo r = infos.computeIfAbsent(key, key2 -> {
                 Random rng = new Random((long) c.cardID.hashCode());

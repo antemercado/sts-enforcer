@@ -9,6 +9,10 @@
   },
   "${ModID}:GetHype": {
     "NAME": "Get Hype",
-    "DESCRIPTION": "Gain !M! Hype."
+    "DESCRIPTION": "${ModID}:Get_Hyped"
+  },
+  "${ModID}:MixUp": {
+    "NAME": "Mix-Up",
+    "DESCRIPTION": "Deal !D! damage. NL If target's block is broken, ${ModID}:Get_Hyped"
   }
 }
