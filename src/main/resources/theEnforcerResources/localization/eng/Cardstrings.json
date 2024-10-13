@@ -37,5 +37,17 @@
     "NAME": "Assist: ",
     "DESCRIPTION": "Receive the help of ",
     "UPGRADE_DESCRIPTION": " NL They're hyped up!"
+  },
+  "${ModID}:OverheadStrike": {
+    "NAME": "Overhead Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable."
+  },
+  "${ModID}:ChargePunch": {
+    "NAME": "Charge Punch",
+    "DESCRIPTION": "Deal !D! damage for each card played this turn.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (!M! card played this turn.)",
+      " NL (!M! cards played this turn.)"
+    ]
   }
 }
