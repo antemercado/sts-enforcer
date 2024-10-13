@@ -5,5 +5,12 @@
       "The next ",
       "-cost card you play is free."
     ]
+  },
+  "${ModID}:AssistCharacterPower": {
+    "NAME": "Assist Character",
+    "DESCRIPTIONS": [
+      "Add ",
+      " Echo of another character's card's to your hand at the start of each turn."
+    ]
   }
 }

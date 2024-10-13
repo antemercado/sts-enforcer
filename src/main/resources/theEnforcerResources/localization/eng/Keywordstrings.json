@@ -3,8 +3,17 @@
     "PROPER_NAME": "Get Hyped",
     "NAMES": [
       "Get Hyped",
-      "get_hyped"
+      "get_hyped",
+      "Hype",
+      "hype"
     ],
     "DESCRIPTION": "Cards with costs equal to the amount of #yHype stacks you have cost 0. Whenever you play a card, if it doesn't have #yGet #yHype, lose all your stacks."
+  },
+  {
+    "PROPER_NAME": "Echo",
+    "NAMES": [
+      "echo"
+    ],
+    "DESCRIPTION": "Add a copy of this card with #yExhaust and #yEthereal to your hand."
   }
 ]

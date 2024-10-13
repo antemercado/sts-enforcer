@@ -14,5 +14,23 @@
   "${ModID}:MixUp": {
     "NAME": "Mix-Up",
     "DESCRIPTION": "Deal !D! damage. NL If target's block is broken, ${ModID}:Get_Hyped"
+  },
+  "${ModID}:Setup": {
+    "NAME": "Setup",
+    "DESCRIPTION": "Scry !M!. Draw !M! cards. NL ${ModID}:Get_Hyped. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Scry !M!. Draw !M! cards. NL ${ModID}:Get_Hyped."
+  },
+  "${ModID}:Finisher": {
+    "NAME": "Finisher",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust if not fatal."
+  },
+  "${ModID}:MeterManagement": {
+    "NAME": "Meter Management",
+    "DESCRIPTION": "Gain [E] equal to your Hype. NL Exhaust."
+  },
+  "${ModID}:AssistCharacter": {
+    "NAME": "Assist Character",
+    "DESCRIPTION": "Choose another character. At the start of each turn, add an ${ModID}:Echo of a random card from their card pool to your hand.",
+    "UPGRADE_DESCRIPTION": "Choose another character. At the start of each turn, add an ${ModID}:Echo of a random card from their card pool to your hand. It gains ${ModID}:Get_Hyped"
   }
 }

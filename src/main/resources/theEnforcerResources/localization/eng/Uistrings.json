@@ -1,0 +1,7 @@
+{
+    "${ModID}:HypeMod": {
+    "TEXT": [
+      " NL ${ModID}:Get_Hyped"
+    ]
+  }
+}
