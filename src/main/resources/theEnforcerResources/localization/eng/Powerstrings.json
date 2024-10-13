@@ -9,9 +9,9 @@
   "${ModID}:AssistCharacterPower": {
     "NAME": "Assist Character",
     "DESCRIPTIONS": [
-      "Receive an Echo of a card from ",
+      "Receive an #yEcho of a card from ",
       " at the start of each turn.",
-      " It has Get Hyped."
+      " It has #yGet #yHyped."
     ]
   }
 }

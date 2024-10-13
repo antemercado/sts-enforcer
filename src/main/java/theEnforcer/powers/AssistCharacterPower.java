@@ -105,7 +105,9 @@ public class AssistCharacterPower extends AbstractPower{
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.assistPlayer.getTitle(this.playerClass) + DESCRIPTIONS[1];
+        String classTitle = "#y" + this.assistPlayer.getTitle(this.playerClass);
+        classTitle = classTitle.replace(" ", " #y");
+        this.description = DESCRIPTIONS[0] + classTitle + DESCRIPTIONS[1];
         if (this.upgraded){
             this.description = this.description + DESCRIPTIONS[2];
         }

@@ -1,5 +1,6 @@
 package theEnforcer.cards;
 
+import static theEnforcer.EnforcerMod.makeCardPath;
 import static theEnforcer.EnforcerMod.makeID;
 import static theEnforcer.EnforcerMod.modID;
 
@@ -32,9 +33,10 @@ public class AssistCharacter extends AbstractEnforcerCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ArrayList<AbstractPlayer> chars  =new ArrayList<>();
+        ArrayList<AbstractPlayer> chars = new ArrayList<>();
         for (AbstractPlayer players: CardCrawlGame.characterManager.getAllCharacters()){
-            if (players.getCardColor() != p.getCardColor()){
+            if ((players.chosenClass != p.chosenClass)
+                && players.chosenClass.toString() != "THE_PACKMASTER") { // Not dealing with that rn
                 chars.add(players);
             }
         }
@@ -61,8 +63,33 @@ public class AssistCharacter extends AbstractEnforcerCard {
     }
 
     private String getCardImage(AbstractPlayer choicePlayer) {
-        // TODO Auto-generated method stub
-        return getCardTextureString(AssistCharHelperCard.ID.replace(modID + ":", ""), TYPE);
+        String ret = getCardTextureString(AssistCharHelperCard.ID.replace(modID + ":", ""), TYPE);
+        ret = makeCardPath("AssistCharacter/");
+        switch (choicePlayer.chosenClass.toString()){
+            case "DEFECT":
+                ret += "defect.png";
+                break;
+            case "IRONCLAD":
+                ret += "ironclad.png";
+                break;
+            case "THE_SILENT":
+                ret += "silent.png";
+                break;
+            case "WATCHER":
+                ret += "watcher.png";
+                break;
+            case "HERMIT":
+                ret += "hermit.png";
+                break;
+            case "THE_PACKMASTER":
+                ret += "packmaster.png";
+                break;
+            default:
+                ret += "unknown.png";
+                break;
+
+        }
+        return ret;
     }
 
     public void upp() {
