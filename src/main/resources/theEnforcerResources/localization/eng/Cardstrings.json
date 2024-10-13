@@ -22,7 +22,7 @@
   },
   "${ModID}:Finisher": {
     "NAME": "Finisher",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust if not fatal."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust if not Fatal."
   },
   "${ModID}:MeterManagement": {
     "NAME": "Meter Management",
@@ -49,5 +49,26 @@
       " NL (!M! card played this turn.)",
       " NL (!M! cards played this turn.)"
     ]
+  },
+  "${ModID}:EveningElephant": {
+    "NAME": "Sekizo",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Weak."
+  },
+  "${ModID}:Punish": {
+    "NAME": "Punish",
+    "DESCRIPTION": "Gain !B! Block. The next time you fully block an attack, apply !M! Vulnerable."
+  },
+  "${ModID}:c5050": {
+    "NAME": "50/50",
+    "DESCRIPTION": "Choose one: NL Deal !D! damage. NL Gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "Choose one: NL Deal !D! damage. NL Gain !B! Block. NL ${ModID}:Get_Hyped."
+  },
+  "${ModID}:c50Attack": {
+    "NAME": "Attack",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "${ModID}:c50Block": {
+    "NAME": "Block",
+    "DESCRIPTION": "Gain !B! Block."
   }
 }
