@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardTags;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -43,27 +44,28 @@ public class AssistCharacterPower extends AbstractPower{
     
     public static final Logger logger = LogManager.getLogger(AssistCharacterPower.class.getName());
     
+    public static int IDOffset;
+
     public ArrayList<PlayerClass> classArray = new ArrayList<>();
     public ArrayList<Boolean> upgradedArray = new ArrayList<>();
     
-    public PlayerClass playerClass;
     public Boolean upgraded;
+    private AbstractPlayer assistPlayer;
+    public PlayerClass playerClass;
 
-    public AssistCharacterPower(AbstractCreature owner, int amount, PlayerClass playerClass, Boolean upgraded){
+    public AssistCharacterPower(AbstractCreature owner, AbstractPlayer assistPlayer, Boolean upgraded){
         name = NAME;
-        ID = POWER_ID;
+        ID = POWER_ID + IDOffset;
+        IDOffset++;
 
         this.owner = owner;
-        this.amount = amount;
-        this.playerClass = playerClass;
+        this.assistPlayer = assistPlayer;
+        this.playerClass = assistPlayer.chosenClass;
         this.upgraded = upgraded;
-        logger.info("Adding playerClass to array: " + playerClass);
-        classArray.add(playerClass);
-        upgradedArray.add(upgraded);
 
         type = PowerType.BUFF;
         isTurnBased = false;
-
+        
         // We load those txtures here.
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
@@ -77,18 +79,16 @@ public class AssistCharacterPower extends AbstractPower{
             return;
         }
         flash();
-        for (int i = 0; i < this.classArray.size(); i++){
-            AbstractCard card = getRandomCharCard(classArray.get(i));
+        AbstractCard card = getRandomCharCard(this.playerClass);
 
-            CardModifierManager.addModifier(card, new ExhaustMod());
-            CardModifierManager.addModifier(card, new EchoedEtherealMod());
-            CardModifierManager.addModifier(card, new GlowEchoMod());
+        CardModifierManager.addModifier(card, new ExhaustMod());
+        CardModifierManager.addModifier(card, new EchoedEtherealMod());
+        CardModifierManager.addModifier(card, new GlowEchoMod());
 
-            if (upgradedArray.get(i)){
-                CardModifierManager.addModifier(card, new HypeMod());
-            }
-            addToBot(new MakeTempCardInHandAction(card));
+        if (this.upgraded){
+            CardModifierManager.addModifier(card, new HypeMod());
         }
+        addToBot(new MakeTempCardInHandAction(card));
     }
 
     private AbstractCard getRandomCharCard(PlayerClass playerClass) {
@@ -102,5 +102,12 @@ public class AssistCharacterPower extends AbstractPower{
             }
         }
         return cardPool.getRandomCard(true).makeCopy();
+    }
+
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0] + this.assistPlayer.getTitle(this.playerClass) + DESCRIPTIONS[1];
+        if (this.upgraded){
+            this.description = this.description + DESCRIPTIONS[2];
+        }
     }
 }

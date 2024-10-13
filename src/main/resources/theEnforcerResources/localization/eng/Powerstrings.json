@@ -9,8 +9,9 @@
   "${ModID}:AssistCharacterPower": {
     "NAME": "Assist Character",
     "DESCRIPTIONS": [
-      "Add ",
-      " Echo of another character's card's to your hand at the start of each turn."
+      "Receive an Echo of a card from ",
+      " at the start of each turn.",
+      " It has Get Hyped."
     ]
   }
 }

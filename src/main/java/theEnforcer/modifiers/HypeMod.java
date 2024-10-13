@@ -22,7 +22,7 @@ public class HypeMod extends AbstractCardModifier{
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        Wiz.applyToSelf(new HypePower(Wiz.adp()));
+        Wiz.applyToSelfTop(new HypePower(Wiz.adp()));
     }
 
     @Override

@@ -32,5 +32,10 @@
     "NAME": "Assist Character",
     "DESCRIPTION": "Choose another character. At the start of each turn, add an ${ModID}:Echo of a random card from their card pool to your hand.",
     "UPGRADE_DESCRIPTION": "Choose another character. At the start of each turn, add an ${ModID}:Echo of a random card from their card pool to your hand. It gains ${ModID}:Get_Hyped"
+  },
+  "${ModID}:AssistCharHelperCard": {
+    "NAME": "Assist: ",
+    "DESCRIPTION": "Receive the help of ",
+    "UPGRADE_DESCRIPTION": " NL They're hyped up!"
   }
 }
