@@ -27,7 +27,7 @@ public class AdrenalineBoosterRelic extends CustomRelic {
     public void atBattleStartPreDraw() {
         flash();
         AbstractPlayer p = Wiz.adp();
-        Wiz.applyToSelf(new HypePower(p, 1));
+        Wiz.applyToSelfTop(new HypePower(p));
     }
     
     @Override
