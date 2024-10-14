@@ -11,6 +11,7 @@ import theEnforcer.cards.cardvars.SecondMagicNumber;
 import theEnforcer.powers.HypePower;
 import theEnforcer.relics.AbstractEasyRelic;
 import theEnforcer.relics.AdrenalineBoosterRelic;
+import theEnforcer.relics.RotaryDial;
 import theEnforcer.util.Wiz;
 
 import com.badlogic.gdx.Gdx;
@@ -126,6 +127,7 @@ public class EnforcerMod implements
     @Override
     public void receiveEditRelics() {
         BaseMod.addRelicToCustomPool(new AdrenalineBoosterRelic(), EnforcerCharacter.Enums.ENFORCER_BLACK);
+        BaseMod.addRelicToCustomPool(new RotaryDial(), EnforcerCharacter.Enums.ENFORCER_BLACK);
     }
 
     @Override

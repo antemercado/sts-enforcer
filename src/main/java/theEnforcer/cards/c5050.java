@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.helpers.CardModifierManager;
+import theEnforcer.enums.CustomTags;
 import theEnforcer.modifiers.HypeMod;
 import theEnforcer.powers.HypePower;
 import theEnforcer.util.Wiz;
@@ -53,6 +54,7 @@ public class c5050 extends AbstractEnforcerCard {
     public void upp() {
         upgradeDamage(UPGRADE_PLUS);
         upgradeBlock(UPGRADE_PLUS);
+        tags.add(CustomTags.HYPE_GEN);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

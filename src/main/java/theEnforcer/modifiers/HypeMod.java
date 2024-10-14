@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 
 import basemod.abstracts.AbstractCardModifier;
 import theEnforcer.EnforcerMod;
+import theEnforcer.enums.CustomTags;
 import theEnforcer.powers.HypePower;
 import theEnforcer.util.Wiz;
 
@@ -23,6 +24,12 @@ public class HypeMod extends AbstractCardModifier{
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         Wiz.applyToSelfTop(new HypePower(Wiz.adp()));
+        card.tags.add(CustomTags.HYPE_GEN);
+    }
+
+    @Override
+    public void onRemove(AbstractCard card) {
+        card.tags.removeIf(p -> p.equals(CustomTags.HYPE_GEN));
     }
 
     @Override

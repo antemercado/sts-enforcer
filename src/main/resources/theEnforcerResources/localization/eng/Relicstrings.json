@@ -12,5 +12,12 @@
     "DESCRIPTIONS": [
       "Start each combat with 1 Hype."
     ]
+  },
+  "${ModID}:RotaryDial": {
+    "NAME": "Rotary Dial",
+    "FLAVOR": "An operator will be with you shortly to assist in your beatdown.",
+    "DESCRIPTIONS": [
+      "Cards containing \"Strike\" have Get Hyped."
+    ]
   }
 }

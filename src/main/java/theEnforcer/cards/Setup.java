@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import theEnforcer.enums.CustomTags;
 import theEnforcer.powers.HypePower;
 import theEnforcer.util.Wiz;
 
@@ -29,6 +30,7 @@ public class Setup extends AbstractEnforcerCard {
         super(ID, COST, TYPE, RARITY, TARGET);
         this.baseMagicNumber = this.magicNumber = MAGIC;
         this.exhaust = true;
+        tags.add(CustomTags.HYPE_GEN);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

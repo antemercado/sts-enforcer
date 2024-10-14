@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import theEnforcer.actions.MixUpAction;
+import theEnforcer.enums.CustomTags;
 import theEnforcer.util.Wiz;
 
 public class MixUp extends AbstractEnforcerCard {
@@ -22,6 +23,7 @@ public class MixUp extends AbstractEnforcerCard {
     public MixUp() {
         super(ID, COST, TYPE, RARITY, TARGET);
         this.baseDamage = this.damage = DAMAGE;
+        tags.add(CustomTags.HYPE_GEN);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
