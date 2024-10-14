@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 import theEnforcer.powers.HypePower;
 import theEnforcer.util.Wiz;
@@ -28,6 +29,7 @@ public class MixUpAction extends AbstractGameAction{
             if ((this.amount >= this.target.currentBlock) && this.target.currentBlock > 0) {
                 Wiz.applyToSelfTop(new HypePower(this.source, 1));
             }
+            AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AbstractGameAction.AttackEffect.BLUNT_LIGHT, false));
             this.target.damage(new DamageInfo(source, amount));
 
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()){

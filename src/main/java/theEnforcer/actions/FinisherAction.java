@@ -25,7 +25,7 @@ public class FinisherAction extends AbstractGameAction{
     @Override
     public void update() {
         if (this.duration == 0.1f && this.target != null){
-            AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+            AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AbstractGameAction.AttackEffect.BLUNT_HEAVY, false));
             this.target.damage(this.info);
             if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead &&
                 !this.target.hasPower(MinionPower.POWER_ID)) {
