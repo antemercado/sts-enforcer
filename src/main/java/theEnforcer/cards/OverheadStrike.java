@@ -15,7 +15,7 @@ public class OverheadStrike extends AbstractEnforcerCard {
     private static final int COST = 2;
     private static final int DAMAGE = 13;
     private static final int MAGIC = 1;
-    private static final int UPGRADE_PLUS_DAMAGE = 4;
+    private static final int UPGRADE_PLUS_DAMAGE = 5;
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
