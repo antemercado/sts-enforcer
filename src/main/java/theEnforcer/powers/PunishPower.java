@@ -28,9 +28,14 @@ public class PunishPower extends AbstractPower{
     private static final Texture tex84 = TexLoader.getTexture(makePowerPath("placeholder_power84.png"));
     private static final Texture tex32 = TexLoader.getTexture(makePowerPath("placeholder_power32.png"));
     
-    public PunishPower(AbstractCreature owner) {
+    public PunishPower(AbstractCreature owner){
+        this(owner, 1);
+    }
+
+    public PunishPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
+        this.amount = amount;
 
         this.owner = owner;
 
@@ -54,7 +59,7 @@ public class PunishPower extends AbstractPower{
             info.type != DamageType.HP_LOSS && info.type != DamageType.THORNS &&
             damageAmount <= 0 && info.output > 0) {
                 this.flash();
-                addToTop(new ApplyPowerAction(info.owner, this.owner, new VulnerablePower(info.owner, 1, false)));
+                addToTop(new ApplyPowerAction(info.owner, this.owner, new VulnerablePower(info.owner, 1, true)));
         }
         addToBot(new ReducePowerAction(owner, owner, this.ID, 1));
         return damageAmount;
