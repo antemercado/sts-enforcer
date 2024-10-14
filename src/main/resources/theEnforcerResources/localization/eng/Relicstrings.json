@@ -10,14 +10,21 @@
     "NAME": "Adrenaline Booster",
     "FLAVOR": "Helps the body maintain performance when under great strain.",
     "DESCRIPTIONS": [
-      "Start each combat with 1 Hype."
+      "Start each combat with #b1 #yHype."
     ]
   },
   "${ModID}:RotaryDial": {
     "NAME": "Rotary Dial",
     "FLAVOR": "An operator will be with you shortly to assist in your beatdown.",
     "DESCRIPTIONS": [
-      "Cards containing \"Strike\" have Get Hyped."
+      "Cards containing \"Strike\" have #yGet #yHyped."
+    ]
+  },
+  "${ModID}:AdrenoTrigger": {
+    "NAME": "Adreno-Trigger",
+    "FLAVOR": "Tu-thump, Tu-thump, Tu-thump.",
+    "DESCRIPTIONS": [
+      "Replaces #pAdrenaline #pBooster. You no longer lose #yHype stacks at the end of your turn."
     ]
   }
 }

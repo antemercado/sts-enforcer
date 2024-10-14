@@ -20,6 +20,7 @@ import static theEnforcer.EnforcerMod.makePowerPath;
 import theEnforcer.EnforcerMod;
 import theEnforcer.actions.HypePowerCheckAction;
 import theEnforcer.enums.CustomTags;
+import theEnforcer.relics.AdrenoTrigger;
 import theEnforcer.util.TexLoader;
 import theEnforcer.util.Wiz;
 
@@ -67,6 +68,9 @@ public class HypePower extends AbstractPower{
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
+        if (Wiz.adp().hasRelic(AdrenoTrigger.ID)){
+            return;
+        }
         flash();
         Wiz.atb(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }

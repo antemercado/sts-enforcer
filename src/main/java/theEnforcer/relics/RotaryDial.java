@@ -58,8 +58,9 @@ public class RotaryDial extends CustomRelic implements
         CardModifierManager.addModifier(c, new HypeMod());
     }
 
-    
+    @Override
+    public String getUpdatedDescription() {
+        return DESCRIPTIONS[0];
+    }    
 
-    // All Strikes have Get Hyped
-    
 }
