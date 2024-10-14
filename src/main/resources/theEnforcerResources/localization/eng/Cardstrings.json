@@ -70,5 +70,9 @@
   "${ModID}:c50Block": {
     "NAME": "Block",
     "DESCRIPTION": "Gain !B! Block."
+  },
+  "${ModID}:SweetChinMusic": {
+    "NAME": "Sweet Chin Music",
+    "DESCRIPTION": "Deal !D! damage. If the target takes unblocked damage, Stun them. NL Exhaust"
   }
 }
