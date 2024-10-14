@@ -13,5 +13,12 @@
       " at the start of each turn.",
       " It has #yGet #yHyped."
     ]
+  },
+  "${ModID}:PunishPower": {
+    "NAME": "Punish",
+    "DESCRIPTIONS": [
+      "The next ",
+      " time(s) you fully block an attack this turn, apply 1 Vulnerable to the attacker."
+    ]
   }
 }

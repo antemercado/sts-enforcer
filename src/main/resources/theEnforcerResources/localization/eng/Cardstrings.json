@@ -56,7 +56,7 @@
   },
   "${ModID}:Punish": {
     "NAME": "Punish",
-    "DESCRIPTION": "Gain !B! Block. The next time you fully block an attack, apply !M! Vulnerable."
+    "DESCRIPTION": "Gain !B! Block. NL The next time you fully block an attack this turn, apply !M! Vulnerable to the attacker."
   },
   "${ModID}:c5050": {
     "NAME": "50/50",
