@@ -2,6 +2,8 @@ package theEnforcer.cards;
 
 import static theEnforcer.EnforcerMod.makeID;
 
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -27,7 +29,7 @@ public class MixUp extends AbstractEnforcerCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.atb(new MixUpAction(p, m, this.damage));
+        Wiz.atb(new MixUpAction(p, m, new DamageInfo(p, this.damage, DamageType.NORMAL)));
     }
 
     public void upp() {

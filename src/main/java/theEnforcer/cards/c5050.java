@@ -40,8 +40,8 @@ public class c5050 extends AbstractEnforcerCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> choiceCards = new ArrayList<>();
-        choiceCards.add(new c50Attack(m));
-        choiceCards.add(new c50Block());
+        choiceCards.add(new c50Attack(this.damage, m));
+        choiceCards.add(new c50Block(this.block));
         if (this.upgraded){
             for (AbstractCard c: choiceCards){
                 c.upgrade();

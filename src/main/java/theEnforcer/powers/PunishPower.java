@@ -54,7 +54,7 @@ public class PunishPower extends AbstractPower{
             info.type != DamageType.HP_LOSS && info.type != DamageType.THORNS &&
             damageAmount <= 0 && info.output > 0) {
                 this.flash();
-                addToTop(new ApplyPowerAction(info.owner, owner, new VulnerablePower(owner, 1, false)));
+                addToTop(new ApplyPowerAction(info.owner, this.owner, new VulnerablePower(info.owner, 1, false)));
         }
         addToBot(new ReducePowerAction(owner, owner, this.ID, 1));
         return damageAmount;

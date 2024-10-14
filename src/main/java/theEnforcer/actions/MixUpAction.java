@@ -12,10 +12,12 @@ import theEnforcer.util.Wiz;
 
 public class MixUpAction extends AbstractGameAction{
 
-    public MixUpAction(AbstractCreature source, AbstractCreature target, int damage) {
+    private DamageInfo info;
+
+    public MixUpAction(AbstractCreature source, AbstractCreature target, DamageInfo damageInfo) {
         this.source = source;
         this.target = target;
-        this.amount = damage;
+        this.info = damageInfo;
     }
 
     public void update() {
@@ -30,7 +32,7 @@ public class MixUpAction extends AbstractGameAction{
                 Wiz.applyToSelfTop(new HypePower(this.source, 1));
             }
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AbstractGameAction.AttackEffect.BLUNT_LIGHT, false));
-            this.target.damage(new DamageInfo(source, amount));
+            this.target.damage(info);
 
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()){
                 AbstractDungeon.actionManager.clearPostCombatActions();

@@ -13,8 +13,6 @@ public class c50Attack extends AbstractEnforcerCard {
     public final static String ID = makeID(c50Attack.class.getSimpleName());
 
     private static final int COST = -2;
-    private static final int DAMAGE = 6;
-    private static final int UPGRADE_PLUS_DAMAGE = 3;
 
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -22,9 +20,9 @@ public class c50Attack extends AbstractEnforcerCard {
 
     private AbstractMonster enemyTarget;
 
-    public c50Attack(AbstractMonster m) {
+    public c50Attack(int damage, AbstractMonster m) {
         super(ID, COST, TYPE, RARITY, TARGET);
-        this.baseDamage = this.damage = DAMAGE;
+        this.baseDamage = this.damage = damage;
         this.enemyTarget = m;
     }
 
@@ -38,6 +36,5 @@ public class c50Attack extends AbstractEnforcerCard {
     }
 
     public void upp() {
-        upgradeDamage(UPGRADE_PLUS_DAMAGE);
     }
 }
