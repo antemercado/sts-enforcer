@@ -46,9 +46,9 @@ public class c5050 extends AbstractEnforcerCard {
             for (AbstractCard c: choiceCards){
                 c.upgrade();
             }
+            Wiz.applyToSelfTop(new HypePower(p));
         }
         addToBot(new ChooseOneAction(choiceCards));
-        Wiz.applyToSelfTop(new HypePower(p));
     }
 
     public void upp() {
