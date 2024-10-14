@@ -25,8 +25,8 @@ public class MixUpAction extends AbstractGameAction{
         tickDuration();
 
         if (this.isDone){
-            if (this.amount >= this.target.currentBlock) {
-                Wiz.applyToSelf(new HypePower(this.source, 1));
+            if ((this.amount >= this.target.currentBlock) && this.target.currentBlock > 0) {
+                Wiz.applyToSelfTop(new HypePower(this.source, 1));
             }
             this.target.damage(new DamageInfo(source, amount));
 
