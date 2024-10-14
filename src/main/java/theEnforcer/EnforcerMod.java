@@ -9,7 +9,7 @@ import theEnforcer.cards.AbstractEnforcerCard;
 import theEnforcer.cards.cardvars.SecondDamage;
 import theEnforcer.cards.cardvars.SecondMagicNumber;
 import theEnforcer.powers.HypePower;
-import theEnforcer.relics.AbstractEasyRelic;
+import theEnforcer.relics.AbstractEnforcerRelic;
 import theEnforcer.relics.AdrenalineBoosterRelic;
 import theEnforcer.relics.RotaryDial;
 import theEnforcer.util.Wiz;
@@ -126,8 +126,19 @@ public class EnforcerMod implements
 
     @Override
     public void receiveEditRelics() {
-        BaseMod.addRelicToCustomPool(new AdrenalineBoosterRelic(), EnforcerCharacter.Enums.ENFORCER_BLACK);
-        BaseMod.addRelicToCustomPool(new RotaryDial(), EnforcerCharacter.Enums.ENFORCER_BLACK);
+        // BaseMod.addRelicToCustomPool(new AdrenalineBoosterRelic(), EnforcerCharacter.Enums.ENFORCER_BLACK);
+        // BaseMod.addRelicToCustomPool(new RotaryDial(), EnforcerCharacter.Enums.ENFORCER_BLACK);
+
+        new AutoAdd(modID)
+            .packageFilter(AbstractEnforcerRelic.class)
+            .any(AbstractEnforcerRelic.class, (info, relic) -> {
+                if (relic.color != null){
+                    BaseMod.addRelicToCustomPool(relic, relic.color);
+                } else {
+                    BaseMod.addRelic(relic, relic.type);
+                }
+                UnlockTracker.markRelicAsSeen(relic.relicId);
+            });
     }
 
     @Override

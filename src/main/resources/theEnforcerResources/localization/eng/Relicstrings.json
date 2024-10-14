@@ -1,12 +1,5 @@
 {
-  "${ModID}:TodoItem": {
-    "NAME": "Todo Item",
-    "FLAVOR": "TODO: make this a sweet relic.",
-    "DESCRIPTIONS": [
-      "Has no effect."
-    ]
-  },
-  "${ModID}:AdrenalineBoosterRelic": {
+"${ModID}:AdrenalineBoosterRelic": {
     "NAME": "Adrenaline Booster",
     "FLAVOR": "Helps the body maintain performance when under great strain.",
     "DESCRIPTIONS": [

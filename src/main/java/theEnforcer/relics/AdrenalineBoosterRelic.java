@@ -12,15 +12,12 @@ import theEnforcer.powers.HypePower;
 import theEnforcer.util.TexLoader;
 import theEnforcer.util.Wiz;
 
-public class AdrenalineBoosterRelic extends CustomRelic {
+public class AdrenalineBoosterRelic extends AbstractEnforcerRelic {
 
     public static final String ID = EnforcerMod.makeID(AdrenalineBoosterRelic.class.getSimpleName());
 
-    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("TodoItem.png"));
-    private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("TodoItem.png"));
-
     public AdrenalineBoosterRelic() {
-        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.CLINK);
+        super(ID, RelicTier.STARTER, LandingSound.CLINK);
     }
 
     @Override
@@ -29,9 +26,5 @@ public class AdrenalineBoosterRelic extends CustomRelic {
         AbstractPlayer p = Wiz.adp();
         Wiz.applyToSelfTop(new HypePower(p));
     }
-    
-    @Override
-    public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
-    }
+
 }

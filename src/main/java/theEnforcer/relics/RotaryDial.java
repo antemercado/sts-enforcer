@@ -17,16 +17,13 @@ import theEnforcer.modifiers.HypeMod;
 import theEnforcer.util.TexLoader;
 import theEnforcer.util.Wiz;
 
-public class RotaryDial extends CustomRelic implements
+public class RotaryDial extends AbstractEnforcerRelic implements
     OnCreateCardInterface {
 
     public static final String ID = EnforcerMod.makeID(RotaryDial.class.getSimpleName());
 
-    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("TodoItem.png"));
-    private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("TodoItem.png"));
-
     public RotaryDial() {
-        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
+        super(ID, RelicTier.SHOP, LandingSound.MAGICAL);
     }
 
     @Override
@@ -57,10 +54,5 @@ public class RotaryDial extends CustomRelic implements
         flash();
         CardModifierManager.addModifier(c, new HypeMod());
     }
-
-    @Override
-    public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
-    }    
 
 }

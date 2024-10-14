@@ -12,15 +12,12 @@ import theEnforcer.EnforcerMod;
 import theEnforcer.util.TexLoader;
 import theEnforcer.util.Wiz;
 
-public class AdrenoTrigger extends CustomRelic {
+public class AdrenoTrigger extends AbstractEnforcerRelic {
 
     public static final String ID = EnforcerMod.makeID(AdrenoTrigger.class.getSimpleName());
 
-    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("TodoItem.png"));
-    private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("TodoItem.png"));
-
     public AdrenoTrigger() {
-        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.CLINK);
+        super(ID, RelicTier.BOSS, LandingSound.CLINK);
     }
 
     @Override
@@ -40,11 +37,6 @@ public class AdrenoTrigger extends CustomRelic {
     @Override
     public boolean canSpawn() {
         return Wiz.adp().hasRelic(AdrenalineBoosterRelic.ID);
-    }
-
-    @Override
-    public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
     }
 
 }
