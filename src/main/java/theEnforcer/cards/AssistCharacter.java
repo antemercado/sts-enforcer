@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import theEnforcer.actions.ApplyAssistCharPower;
@@ -28,6 +29,9 @@ public class AssistCharacter extends AbstractEnforcerCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
 
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    
     public AssistCharacter() {
         super(ID, COST, TYPE, RARITY, TARGET);
     }
@@ -93,5 +97,7 @@ public class AssistCharacter extends AbstractEnforcerCard {
     }
 
     public void upp() {
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }
