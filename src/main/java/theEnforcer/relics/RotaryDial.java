@@ -13,7 +13,7 @@ import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardModifierManager;
 import theEnforcer.EnforcerMod;
 import theEnforcer.enums.CustomTags;
-import theEnforcer.modifiers.HypeMod;
+import theEnforcer.modifiers.cardMods.HypeMod;
 import theEnforcer.util.TexLoader;
 import theEnforcer.util.Wiz;
 

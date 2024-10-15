@@ -26,10 +26,10 @@ import basemod.helpers.CardModifierManager;
 import static theEnforcer.EnforcerMod.makePowerPath;
 
 import theEnforcer.EnforcerMod;
-import theEnforcer.modifiers.EchoMod;
-import theEnforcer.modifiers.EchoedEtherealMod;
-import theEnforcer.modifiers.GlowEchoMod;
-import theEnforcer.modifiers.HypeMod;
+import theEnforcer.modifiers.cardMods.EchoMod;
+import theEnforcer.modifiers.cardMods.EchoedEtherealMod;
+import theEnforcer.modifiers.cardMods.GlowEchoMod;
+import theEnforcer.modifiers.cardMods.HypeMod;
 import theEnforcer.util.TexLoader;
 import java.util.ArrayList;
 

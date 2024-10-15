@@ -1,5 +1,5 @@
 // Copied from Diamsword's code from Packmaster Mod
-package theEnforcer.modifiers;
+package theEnforcer.modifiers.cardMods;
 
 import org.apache.commons.lang3.StringUtils;
 

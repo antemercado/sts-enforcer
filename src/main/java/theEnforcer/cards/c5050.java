@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.helpers.CardModifierManager;
 import theEnforcer.enums.CustomTags;
-import theEnforcer.modifiers.HypeMod;
+import theEnforcer.modifiers.cardMods.HypeMod;
 import theEnforcer.powers.HypePower;
 import theEnforcer.util.Wiz;
 

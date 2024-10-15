@@ -1,5 +1,5 @@
 // Copied from Diamsword's code from Packmaster Mod
-package theEnforcer.modifiers;
+package theEnforcer.modifiers.cardMods;
 
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;

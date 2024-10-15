@@ -1,4 +1,4 @@
-package theEnforcer.modifiers;
+package theEnforcer.modifiers.cardMods;
 
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
