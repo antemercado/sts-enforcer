@@ -36,7 +36,7 @@ public class Setup extends AbstractEnforcerCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ScryAction(this.magicNumber));
         addToBot(new DrawCardAction(this.magicNumber));
-        Wiz.applyToSelf(new HypePower(p));
+        Wiz.applyToSelfTop(new HypePower(p));
     }
 
     public void upp() {
