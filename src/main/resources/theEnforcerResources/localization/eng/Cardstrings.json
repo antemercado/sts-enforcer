@@ -74,5 +74,9 @@
   "${ModID}:SweetChinMusic": {
     "NAME": "Sweet Chin Music",
     "DESCRIPTION": "Deal !D! damage. If the target takes unblocked damage, Stun them. NL Exhaust"
+  },
+  "${ModID}:RunawayTrain": {
+    "NAME": "Runaway Train",
+    "DESCRIPTION": "{@@}Whenever you play a 0-cost card, draw !M! card{!M!|>1=s}."
   }
 }

@@ -20,5 +20,12 @@
       "The next ",
       " time(s) you fully block an attack this turn, apply 1 Vulnerable to the attacker."
     ]
+  },
+  "${ModID}:RunawayTrainPower": {
+    "NAME": "Runaway Train",
+    "DESCRIPTIONS": [
+      "Whenever you play a 0-cost card, draw ",
+      " card(s)."
+    ]
   }
 }
