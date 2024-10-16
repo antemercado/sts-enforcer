@@ -21,7 +21,7 @@
     "UPGRADE_DESCRIPTION": "Scry !M!. Draw !M! cards. NL ${ModID}:Get_Hyped."
   },
   "${ModID}:Finisher": {
-    "NAME": "Finisher",
+    "NAME": "Killing Blow",
     "DESCRIPTION": "Deal !D! damage. NL Exhaust if not Fatal."
   },
   "${ModID}:MeterManagement": {
@@ -73,10 +73,22 @@
   },
   "${ModID}:SweetChinMusic": {
     "NAME": "Sweet Chin Music",
-    "DESCRIPTION": "Deal !D! damage. If the target takes unblocked damage, Stun them. NL Exhaust"
+    "DESCRIPTION": "Deal !D! damage. If the target takes unblocked damage, Stun them. NL Exhaust."
   },
   "${ModID}:RunawayTrain": {
     "NAME": "Runaway Train",
     "DESCRIPTION": "{@@}Whenever you play a 0-cost card, draw !M! card{!M!|>1=s}."
+  },
+  "${ModID}:ArmorCrush": {
+    "NAME": "Armor Crush",
+    "DESCRIPTION": "Deal damage equal to the target's block. Damage bypasses block.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to twice the target's block. Damage bypasses block.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage.)"
+    ]
+  },
+  "${ModID}:OpeningStrike": {
+    "NAME": "Opening Strike",
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL ${ModID}:Get_Hyped. NL Exhaust."
   }
 }
