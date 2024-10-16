@@ -14,8 +14,8 @@ public class Finisher extends AbstractEnforcerCard {
     public final static String ID = makeID(Finisher.class.getSimpleName());
 
     private static final int COST = 3;
-    private static final int DAMAGE = 26;
-    private static final int UPGRADE_PLUS_DAMAGE = 8;
+    private static final int UPGRADED_COST = 2;
+    private static final int DAMAGE = 21;
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -31,6 +31,6 @@ public class Finisher extends AbstractEnforcerCard {
     }
 
     public void upp() {
-        upgradeDamage(UPGRADE_PLUS_DAMAGE);
+        upgradeBaseCost(UPGRADED_COST);
     }
 }

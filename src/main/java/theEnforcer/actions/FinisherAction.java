@@ -9,10 +9,18 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
+import theEnforcer.powers.AssistCharacterPower;
+import theEnforcer.util.Wiz;
+
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+
 public class FinisherAction extends AbstractGameAction{
 
     private DamageInfo info;
     private AbstractCard cardToExhaust;
+
+    public static final Logger logger = LogManager.getLogger(FinisherAction.class.getName());
 
     public FinisherAction(AbstractCreature target, DamageInfo info, AbstractCard card){
         this.info = info;
@@ -29,9 +37,9 @@ public class FinisherAction extends AbstractGameAction{
             this.target.damage(this.info);
             if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead &&
                 !this.target.hasPower(MinionPower.POWER_ID)) {
-                    
                 } else {
-                    addToTop(new ExhaustSpecificCardAction(this.cardToExhaust, null));
+                    Wiz.adp().discardPile.moveToExhaustPile(this.cardToExhaust);
+                    
                 }
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
                 AbstractDungeon.actionManager.clearPostCombatActions();
