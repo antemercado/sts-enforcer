@@ -31,7 +31,7 @@
   "${ModID}:AssistCharacter": {
     "NAME": "Assist Character",
     "DESCRIPTION": "Choose another character. At the start of each turn, add an ${ModID}:Echo of a random card from their card pool to your hand.",
-    "UPGRADE_DESCRIPTION": "Choose another character. At the start of each turn, add an ${ModID}:Echo of a random card from their card pool to your hand. It gains ${ModID}:Get_Hyped"
+    "UPGRADE_DESCRIPTION": "Choose another character. At the start of each turn, add an ${ModID}:Echo of a random card from their card pool to your hand. It has ${ModID}:Get_Hyped"
   },
   "${ModID}:AssistCharHelperCard": {
     "NAME": "Assist: ",
@@ -56,7 +56,7 @@
   },
   "${ModID}:Punish": {
     "NAME": "Punish",
-    "DESCRIPTION": "Gain !B! Block. NL The next time you fully block an attack this turn, apply !M! Vulnerable to the attacker."
+    "DESCRIPTION": "Gain !B! Block. The next time you fully block an attack this turn, apply !M! Vulnerable to the attacker."
   },
   "${ModID}:c5050": {
     "NAME": "50/50",
