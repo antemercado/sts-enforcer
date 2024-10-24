@@ -1,7 +1,12 @@
 {
-    "${ModID}:HypeMod": {
+  "${ModID}:HypeMod": {
     "TEXT": [
       " NL ${ModID}:Get_Hyped"
+    ]
+  },
+  "${ModID}:RechargeAction": {
+    "TEXT": [
+      "Exhaust"
     ]
   }
 }

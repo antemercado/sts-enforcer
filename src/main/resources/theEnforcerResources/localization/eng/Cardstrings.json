@@ -90,5 +90,29 @@
   "${ModID}:OpeningStrike": {
     "NAME": "Opening Strike",
     "DESCRIPTION": "Innate. NL Deal !D! damage. NL ${ModID}:Get_Hyped. NL Exhaust."
+  },
+  "${ModID}:EnergyShield": {
+    "NAME": "Energy Shield",
+    "DESCRIPTION": "Whenever you play a card, gain block equal to its base cost."
+  },
+  "${ModID}:Rewire": {
+    "NAME": "Rewire",
+    "DESCRIPTION": "Increase or Decrease the cost of adjacent cards by !M! this turn."
+  },
+  "${ModID}:RewireHelper": {
+    "NAME": "RewireHelper",
+    "DESCRIPTION": "RewireHelper",
+    "EXTENDED_DESCRIPTION": [
+      "Decrease",
+      "Increase",
+      "Reduce adjacent card cost.",
+      "Increase adjacent card cost."
+    ]
+    
+  },
+  "${ModID}:Recharge": {
+    "NAME": "Recharge",
+    "DESCRIPTION": "Exhaust a card. Draw cards equal to its base cost.",
+    "UPGRADE_DESCRIPTION": "Exhaust a card. Draw cards equal to its base cost plus !M!."
   }
 }

@@ -27,5 +27,11 @@
       "Whenever you play a 0-cost card, draw ",
       " card(s)."
     ]
+  },
+  "${ModID}:EnergyShieldPower": {
+    "NAME": "Energy Shield",
+    "DESCRIPTIONS": [
+      "Whenever you play a card, gain block equal to it's base cost."
+    ]
   }
 }

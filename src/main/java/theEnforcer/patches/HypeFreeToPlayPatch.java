@@ -24,7 +24,7 @@ public class HypeFreeToPlayPatch {
         (AbstractDungeon.getCurrRoom()).phase == AbstractRoom.RoomPhase.COMBAT){
             if (AbstractDungeon.player.hasPower(HypePower.POWER_ID)){
                 int hypeStacks = AbstractDungeon.player.getPower(HypePower.POWER_ID).amount;
-                if (c.cost == hypeStacks){
+                if ((c.cost == hypeStacks) || (c.costForTurn == hypeStacks)){
                     return SpireReturn.Return(true);
                 }
             }
